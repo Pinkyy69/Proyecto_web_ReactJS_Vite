@@ -11,14 +11,35 @@ import './App.css';
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Tours />
-      <Gallery />
-      <Contact />
-      <Carousel />
-      <Footer />
+      {/* Video de fondo global */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        src="/scuba.mp4"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          objectFit: "cover",
+          zIndex: 0,
+          opacity: 0.35,
+          pointerEvents: "none"
+        }}
+      />
+      <div style={{ position: "relative", zIndex: 1 }}>
+        <Navbar />
+        <Hero />
+        <About />
+        <Tours />
+        <Gallery />
+        <Contact />
+        <Carousel />
+        <Footer />
+      </div>
     </>
   );
 }
